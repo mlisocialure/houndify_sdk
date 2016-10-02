@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "4.13.3",
+    "houndify": "file:houndify-0.4.0.tgz",
+    "minimist": "1.2.0",
+    "wav": "1.0.0"
+  }
+}
