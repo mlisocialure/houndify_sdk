@@ -24,21 +24,6 @@ describe('Houndify', function() {
       });
   });
   
-it('should add an item on POST', function(done) {
-    chai.request(app)
-      .send({'name': 'Weather'})
-      .end(function(err, res) {
-        should.equal(err, null);
-        res.should.have.status(201);
-        res.should.be.json; // jshint ignore:line
-        res.body.should.be.a('object');
-        res.body.should.have.property('name');
-        res.body.name.should.be.a('string');
-        res.body.name.should.equal('Weather');
-        done();
-      });
-  });  
- 
 
   
 
