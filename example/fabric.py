@@ -21,10 +21,10 @@ def clone_repo():
     
     run('git clone https://github.com/mlisocialure/houndify_sdk' % env)
 
-if we are pulling a file from github
+if we are pulling the file from github
 """
 
-def test ():
+def unit_test ():
     run('mocha test-server' % env)
 
 
@@ -32,8 +32,8 @@ def test ():
 def commit_repo():
     
     run('git add .' % env)
-    run ('git commit -m 'commit message here' ' % env)
-    run ('git push origin master' % env)
+    run('git commit -m (some message here) ' % env)
+    run('git push origin master' % env)
     
     
    
@@ -52,6 +52,44 @@ def deploy():
     gzip_assets()
     deploy_to_s3()
     refresh_widgets()
-    maintenance_down()    
+    maintenance_down()   
+
+
+"""
+This is if I need to do some server wide update
+
+env.hosts = [
+    'server.domain.tld',
+  # 'ip.add.rr.ess
+  # 'server2.domain.tld',
+]
+# Set the username
+env.user   = "root"
+
+# Set the password [NOT RECOMMENDED]
+# env.password = "passwd"
+
+def update_upgrade():
+    """
+        Update the default OS installation's
+        basic default tools.
+                                            """
+    run("aptitude    update")
+    run("aptitude -y upgrade")
+
+def install_memcached():
+    """ Download and install some app on all servers. """
+    run("aptitude install -y memcached")
+
+def update_install():
+
+    # Update
+    update_upgrade()
+
+    # Install
+    install_memcached()
+    
+"""    
+    
     
 
