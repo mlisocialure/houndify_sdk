@@ -24,6 +24,13 @@ def clone_repo():
 if we are pulling the file from github
 """
 
+def install_npm_dependencies ():
+    run('npm install ---save express' % env)
+    run('npm install --save minimist' % env)
+#any other dependencies you want to install, just put the command here and it will install in one sequence
+
+
+
 def unit_test ():
     run('mocha test-server' % env)
 
@@ -70,15 +77,11 @@ env.user   = "root"
 # env.password = "passwd"
 
 def update_upgrade():
-    """
-        Update the default OS installation's
-        basic default tools.
-                                            """
+    
     run("aptitude    update")
     run("aptitude -y upgrade")
 
 def install_memcached():
-    """ Download and install some app on all servers. """
     run("aptitude install -y memcached")
 
 def update_install():
