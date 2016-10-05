@@ -8,7 +8,8 @@ The Houndify platform is still in beta. This little project is aimed at automati
 the deployment instances of a houndify SDK.
 
 Here I use a customized houndify SDK example, using the javascript SDK from Houndify as a template
-added some unit tests via mocha to test out all the endpoints,  
+added some unit tests via mocha to test out the GET endpoint.  
+
 and automated the basic admin side functions of upgrading and deploying instances of the app deployment via scripts written
 in fabric.py (Fore more information on fabric see here http://www.fabfile.org). 
 
