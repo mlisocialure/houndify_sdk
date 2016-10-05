@@ -1,7 +1,7 @@
 # houndify_sdk
 Houndify is a really cool platform by Sound Hound that allows anyone to add smart, voice enabled, conversational interfaces 
 to anything with an internet connection.
-For more information on this see here: (https://www.houndify.com/docs)
+For more information on this see here: (https://www.houndify.com/docs). You may have to create a new user login first.
 
 
 The Houndify platform is still in beta. This little project is aimed at automating the maintenance and upgrade of 

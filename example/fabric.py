@@ -3,7 +3,7 @@ from fabric.api import *
 def cleanup_env(directory_path):      #deleting old deployment instance first
     sudo ('rm -rf %s' % directory_path)
 
-# Base configurations, fabric uses python 2.6 but is compatible with python 3.x:
+# Setting up the environment, fabric uses python 2.6 but is compatible with python 3.x:
 env.project_name = '$(project)'
 env.database_password = '$(db_password)'
 env.site_media_prefix = "site_media"
